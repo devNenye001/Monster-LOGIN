@@ -1,0 +1,195 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Avenir';
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/AvenirNextLTPro-Regular.otf') format('opentype');
+}
+body{
+    background-color: #58C4EF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1{
+    font-size: 100px;
+    color: white;
+}
+.h2{
+    font-size: 30px;
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+}
+.heading{
+    padding: 40px;
+}
+.container{
+    position: relative;
+    z-index: 2;
+    bottom: -180px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    border: 13px solid #AB0303;
+    height: auto;
+    background-color: #AB0303;
+    border-radius: 20px;
+}
+input{
+    height: 40px;
+    width: 300px;
+    padding: 20px;
+    border: none;
+}
+#email-input{
+    border-radius: 10px 10px 0px 0px;
+}
+#pass-input{
+    border-radius: 0px 0px 10px 10px;
+}
+hr{
+    border: 3px solid #D6D7D8;
+}
+#btn{
+    height: 60px;
+    width: 140px;
+    font-size: 18px;
+    color: white;
+    background-color: #F64E02;
+    border: none;
+    border-radius: 12px;
+    position: relative;
+    z-index: 2;
+    position: relative;
+    left: 480px;
+    bottom: -20px;
+}
+.animal-body {
+  width: 85vw;
+  height: 120vh;
+  background-color: #F20303;
+  border-radius: 50%;
+  position: fixed;
+  bottom: -450px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.eyes{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 450px;
+}
+.eyes div{
+    border:4px solid #AB0303;
+    background-color: white;
+    border-radius: 50%;
+    margin: 20px;
+    padding: 10px 20px; 
+    clip-path: inset(9px 5px 0px 0px);
+} 
+.eyes div h1{
+  font-size: 18px;
+  position: relative;
+  top: -6px;
+}
+.head{
+  height: 50vh;
+  width: 30vw;
+  background-color:#F20303;
+  border-radius: 50%;
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#hand {
+  width: 60px;
+  height: 80px;
+  background-color: #AB0303;
+  border-radius: 40% 40% 60% 60%; /* Curve the hand */
+  /* top: -20px; */
+  z-index: 4;
+}
+
+/* Left curved hand */
+.left-hand {
+    position: relative;
+  left: 450px;
+  top: 120px;
+  transform: rotate(-80deg);
+}
+
+/* Right curved hand */
+.right-hand {
+    position: relative;
+  right: -590px;
+  top: -40px;
+  transform: rotate(80deg);
+}
+.hand-div{
+   cursor: pointer;
+   transition: transform 0.1s ease;
+}
+.hand-div:active {
+  transform: translateY(5px);
+}
+
+.forehead-mark {
+  position: absolute;
+  top: -100px;
+  left: 500px;
+  right: 250px;
+  transform: translateX(-50%);
+  transform: rotate(180deg);
+  width: 90px;
+  height: 60px;
+  background-color: #AB0303;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 90px;
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  overflow: hidden;
+}
+
+.forehead-mark::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: radial-gradient(circle at 25% 0, transparent 20px, #AB0303 21px),
+              radial-gradient(circle at 50% 0, transparent 20px, #AB0303 21px),
+              radial-gradient(circle at 75% 0, transparent 20px, #AB0303 21px);
+  background-repeat: no-repeat;
+}
+.left-horn, .right-horn {
+  width: 80px;
+  height: 250px;
+  background: #AB0303; /* dark orange */
+  position: absolute;
+  top: -110px; 
+  transform: rotate(40deg);
+  z-index: -1;
+}
+
+.left-horn {
+  left: 300px;
+  transform: rotate(-70deg);
+  border-radius: 100% 20% 0 0;
+}
+
+.right-horn {
+  right: 300px;
+  transform: rotate(70deg);
+  border-radius: 20% 100% 0 0;
+}
